@@ -1,0 +1,14 @@
+{
+  "name": "phaser3-webpack-es6-dev-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "6",
+    "babel-loader": "^7.0.0",
+    "webpack": "^3.0.0"
+  },
+  "dependencies": {
+    "phaser": "^3.0.0"
+  }
+}
