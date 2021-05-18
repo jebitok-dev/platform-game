@@ -6,9 +6,16 @@ import PreloaderScene from './Scenes/PreloaderScene';
 import TitleScene from './Scenes/TitleScene';
 import OptionsScene from './Scenes/OptionsScene';
 import CreditsScene from './Scenes/CreditsScene';
-import { showMessage } from './messager';
+import { SimpleScene } from './Scenes/simple-scene';
 
-showMessage('Somebody else did this work!');
+const gameConfig = {
+  width: 680,
+  height: 400,
+  scene: SimpleScene
+};
+
+new Phaser.Game(gameConfig);
+
 class Game extends Phaser.Game {
   constructor () {
     super(config);
