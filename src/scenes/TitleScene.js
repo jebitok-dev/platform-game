@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
  
 export default class TitleScene extends Phaser.Scene {
   constructor () {
@@ -9,37 +9,50 @@ export default class TitleScene extends Phaser.Scene {
   }
  
   create() {
-        // Game
-    this.gameButton = this.add.sprite(100, 200, 'blueButton1').setInteractive();
-    this.centerButton(this.gameButton, 1);
+    // Images
+    this.add.image(400, 80, 'star');
+    this.add.image(400, 130, 'dude');
 
-    this.gameText = this.add.text(0, 0, 'Play', { fontSize: '32px', fill: '#fff' });
-    this.centerButtonText(this.gameText, this.gameButton);
+    // Title
+    this.title = this.add.text(400, 250, 'Platformer', {
+      fontSize: 50,
+      fontStyle: 'bold',
+      align: 'center',
+      color: '#aaaaaa',
+    });
+    this.title.setOrigin(0.5, 0.5);
 
-    this.gameButton.on('pointerdown', function (pointer) {
+    // Buttons constructor
+    const btn = (scene, positionX, positionY, btnDet, textSize) => {
+      const btn = scene.add.text(positionX, positionY, btnDet, {
+        fontSize: textSize,
+      });
+      btn.setOrigin(0.5, 0);
+      btn.setInteractive();
+      return btn;
+    };
+    // Play button
+    this.gameButton = btn(this, 400, 330, 'Play', 35);
+    this.gameButton.on('pointerdown', () => {
       this.scene.start('Game');
-    }.bind(this));
-
-    this.input.on('pointerover', function (event, gameObjects) {
-      gameObjects[0].setTexture('blueButton2');
     });
 
-    this.input.on('pointerout', function (event, gameObjects) {
-      gameObjects[0].setTexture('blueButton1');
+    // Option button
+    this.gameButton = btn(this, 400, 400, 'Options', 28);
+    this.gameButton.on('pointerdown', () => {
+      this.scene.start('Options');
     });
 
-    // centerButton (gameObject, offset = 0) {
-    //   Phaser.Display.Align.In.Center(
-    //     gameObject,
-    //     this.add.zone(config.width/2, config.height/2 - offset * 100, config.width, config.height)
-    //   );
-    // }
-    
-    // centerButtonText (gameText, gameButton) {
-    //   Phaser.Display.Align.In.Center(
-    //     gameText,
-    //     gameButton
-    //   );
-    // }
+    // Leaderboard button
+    this.gameButton = btn(this, 400, 445, 'LeaderBoard', 28);
+    this.gameButton.on('pointerdown', () => {
+      this.scene.start('LeaderBoard');
+    });
+
+    // Credits button
+    this.gameButton = btn(this, 400, 490, 'Credits', 28);
+    this.gameButton.on('pointerdown', () => {
+      this.scene.start('Credits');
+    });
   }
 };
