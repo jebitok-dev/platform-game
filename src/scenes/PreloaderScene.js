@@ -1,14 +1,14 @@
 import Phaser from 'phaser';
-import play from '../assets/play';
-import credits from '../assets/credits';
-import how2playbtn from '../assets/how2playbtn';
-import ground from '../assets/platform';
-import star from '../assets/star';
-import bomb from '../assets/bomb';
-import dud from '../assets/purpul-dud';
- 
+import play from '../assets/play.png';
+import credits from '../assets/credits.png';
+import how2playbtn from '../assets/how2playbtn.png';
+import success from '../assets/success.png';
+import star from '../assets/star.png';
+import bomb from '../assets/bomb.png';
+import dude from '../assets/purpul-dud.png';
+
 export default class PreloaderScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Preloader');
   }
 
@@ -23,15 +23,15 @@ export default class PreloaderScene extends Phaser.Scene {
     }
   }
 
-    preload() {
-      // load assets needed in our game
-      this.load.image('blue', blue);
-      this.load.image('platform', platform);
-      this.load.image('star', star);
-      this.load.image('bomb', bomb);
-      this.load.spritesheet('purpul-dud', { frameWidth: 32, frameHeight: 48 });
-      
-      const progressBar = this.add.graphics();
+  preload() {
+    // load assets needed in our game
+    this.load.image('blue', blue);
+    this.load.image('platform', success);
+    this.load.image('star', star);
+    this.load.image('bomb', bomb);
+    this.load.spritesheet('purpul-dud', { frameWidth: 32, frameHeight: 48 });
+
+    const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
     progressBox.fillStyle(0x222222, 0.8);
     progressBox.fillRect(240, 270, 320, 50);
@@ -97,4 +97,4 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('how2playbtn', how2playbtn);
     this.load.image('credits', credits);
   }
-};
+}

@@ -10,8 +10,8 @@ let scoreText;
 let bombs;
 let gameOver = false;
 
-const collectStar = (player, start) => {
-  stars.disableBody(true, true);
+const collectStar = (player, star) => {
+  star.disableBody(true, true);
 
   score += 10000;
   scoreText.setText(`Score: ${score}`);
@@ -29,24 +29,24 @@ const collectStar = (player, start) => {
     bombed.setVelocity(Phaser.Math.Between(-200, 200), 20);
   }
 };
-
+/* eslint-disable*/
 const hitBomb = (player, bombed) => {
   player.setInit(0xf00);
   player.anims.play('turn');
   gameOver = true;
 };
- 
+
 export default class GameScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Game');
   }
- 
-  preload () {
+
+  preload() {
     // load images
     this.load.image('logo', 'assets/logo.png');
   }
- 
-  create () {
+
+  create() {
     this.add.image(400, 300, 'sky');
 
     // Platforms
@@ -143,4 +143,4 @@ export default class GameScene extends Phaser.Scene {
       score = 0;
     }
   }
-};
+}

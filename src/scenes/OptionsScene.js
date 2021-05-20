@@ -1,13 +1,10 @@
-import 'phaser';
- 
+import Phaser from 'phaser';
+
 export default class OptionsScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Options');
   }
- 
-  preload () {
-  }
- 
+
   create() {
     this.add.sprite(400, 100, 'dude');
 
@@ -54,4 +51,4 @@ export default class OptionsScene extends Phaser.Scene {
       this.scene.start('Title');
     });
   }
-};
+}

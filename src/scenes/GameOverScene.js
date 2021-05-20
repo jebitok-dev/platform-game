@@ -1,50 +1,50 @@
-import Phaser, { DOM } from 'phaser';
-import DOM from '../js/dom';
+import Phaser from 'phaser';
+import Dom from '../js/dom';
 import LocalStorage from '../js/localStorage';
 
 export default class GameOverScene extends Phaser.Scene {
-    constructor() {
-        super('GameOver');
-    }
+  constructor() {
+    super('GameOver');
+  }
 
-    create() {
-        this.title = this.add.text(400, 120, 'Game Over', {
-            font: '50px monospase',
-            fill: '#bbb',
-        });
-        this.title.setOrigin(0.5, 0.5);
+  create() {
+    this.title = this.add.text(400, 120, 'Game Over', {
+      font: '50px monospase',
+      fill: '#bbb',
+    });
+    this.title.setOrigin(0.5, 0.5);
 
-        const score = localStorage.getScore();
-        localStorage.clearStorage();
+    const score = LocalStorage.getScore();
+    LocalStorage.clearStorage();
 
-        this.score = this.add.text(400, 200, `Your score is: ${score}`, {
-            font: '35px monoscape',
-            fill: '#888',
-        });
-        this.score.setOrigin(0.5, 0.5);
+    this.score = this.add.text(400, 200, `Your score is: ${score}`, {
+      font: '35px monoscape',
+      fill: '#888',
+    });
+    this.score.setOrigin(0.5, 0.5);
 
-        const btn = (scene, positionX, positionY, btnDet, textSize) => {
-            const btn = scene.add.text(positionX, positionY, btnDet, {
-                fontSize: textSize,
-            });
-            btn.setOrigin(0.5, 0);
-            btn.setInteractive();
-            return btn;
-        };
+    const btn = (scene, positionX, positionY, btnDet, textSize) => {
+      const btn = scene.add.text(positionX, positionY, btnDet, {
+        fontSize: textSize,
+      });
+      btn.setOrigin(0.5, 0);
+      btn.setInteractive();
+      return btn;
+    };
 
-        this.gameButton = btn(this, 300, 500, 'Play', 35);
-        this.gameButton.on('pointerdown', () => {
-            D0M.removeDOMElements();
-            this.scene.start('Game');
-        });
+    this.gameButton = btn(this, 300, 500, 'Play', 35);
+    this.gameButton.on('pointerdown', () => {
+      Dom.removeDOMElements();
+      this.scene.start('Game');
+    });
 
-        this.gameButton = btn(this, 500, 500, 'Play', 35);
-        this.gameButton.on('pointerdown', () => {
-            DOM.removeDOMElements();
-            this.scene.start('Title');
-        });
+    this.gameButton = btn(this, 500, 500, 'Play', 35);
+    this.gameButton.on('pointerdown', () => {
+      Dom.removeDOMElements();
+      this.scene.start('Title');
+    });
 
-        DOM.nameForm();
-        DOM.submitButtonAction(score);
-    }
+    Dom.nameForm();
+    Dom.submitButtonAction(score);
+  }
 }

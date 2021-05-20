@@ -1,13 +1,10 @@
-import 'phaser';
- 
+import Phaser from 'phaser';
+
 export default class CreditsScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Credits');
   }
- 
-  preload () {
-  }
- 
+
   create() {
     this.add.sprite(400, 100, 'dude');
 
@@ -54,4 +51,4 @@ export default class CreditsScene extends Phaser.Scene {
       this.scene.start('Title');
     });
   }
-};
+}

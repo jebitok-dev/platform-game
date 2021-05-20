@@ -1,13 +1,10 @@
 import Phaser from 'phaser';
- 
+
 export default class TitleScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Title');
   }
- 
-  preload () {
-  }
- 
+
   create() {
     // Images
     this.add.image(400, 80, 'star');
@@ -55,4 +52,4 @@ export default class TitleScene extends Phaser.Scene {
       this.scene.start('Credits');
     });
   }
-};
+}

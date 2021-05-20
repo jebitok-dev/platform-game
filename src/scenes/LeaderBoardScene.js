@@ -2,13 +2,13 @@ import Phaser from 'phaser';
 import api from '../js/api';
 
 export default class LeaderBoardScene extends Phaser.Scene {
-    constructor() {
-        super('LeaderBoard');
-    }
+  constructor() {
+    super('LeaderBoard');
+  }
 
-    async create() {
-        const response = await api.ScoreList();
-        const scoreList = response.result.sort((a, b) => b.score - a.score);
+  async create() {
+    const response = await api.ScoreList();
+    const scoreList = response.result.sort((a, b) => b.score - a.score);
     let player = '';
     for (let i = 0; i < 5; i += 1) {
       player += `${i + 1}.    ${scoreList[i].user}: ${scoreList[i].score
@@ -70,5 +70,5 @@ export default class LeaderBoardScene extends Phaser.Scene {
     this.gameButton.on('pointerdown', () => {
       this.scene.start('Title');
     });
-    }
+  }
 }
