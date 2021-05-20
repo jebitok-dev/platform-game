@@ -1,5 +1,5 @@
 import Phaser, { DOM } from 'phaser';
-import Dom from '../js/dom';
+import DOM from '../js/dom';
 import LocalStorage from '../js/localStorage';
 
 export default class GameOverScene extends Phaser.Scene {
@@ -34,17 +34,17 @@ export default class GameOverScene extends Phaser.Scene {
 
         this.gameButton = btn(this, 300, 500, 'Play', 35);
         this.gameButton.on('pointerdown', () => {
-            Dom.removeDOMElements();
+            D0M.removeDOMElements();
             this.scene.start('Game');
         });
 
         this.gameButton = btn(this, 500, 500, 'Play', 35);
         this.gameButton.on('pointerdown', () => {
-            Dom.removeDOMElements();
+            DOM.removeDOMElements();
             this.scene.start('Title');
         });
 
-        Dom.nameform();
-        Dom.submitButtonAction(score);
+        DOM.nameForm();
+        DOM.submitButtonAction(score);
     }
 }
