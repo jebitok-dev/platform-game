@@ -1,4 +1,4 @@
-import ScoreAPI from './api';
+import scoreAPI from './api';
 
 const Dom = (() => {
   const nameForm = () => {
@@ -27,7 +27,7 @@ const Dom = (() => {
       button.onclick = () => {
         if (input.value !== '') {
           form.innerHTML = '<h3 id="submitting">Posting...</h3>';
-          ScoreAPI.submit(input.value, score).then((response) => {
+          scoreAPI.submit(input.value, score).then((response) => {
             form.innerHTML = `<h3 id="response">${response.result}</h3>`;
           });
         } else {
@@ -37,7 +37,7 @@ const Dom = (() => {
     }, 1000);
   };
 
-  const removeDOMElements = () => {
+  const removeDomElements = () => {
     const form = document.querySelector('#form');
     form.parentNode.removeChild(form);
   };
@@ -45,7 +45,7 @@ const Dom = (() => {
   return {
     nameForm,
     submitButtonAction,
-    removeDOMElements,
+    removeDomElements,
   };
 })();
 

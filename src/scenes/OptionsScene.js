@@ -6,7 +6,7 @@ export default class OptionsScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.sprite(400, 100, 'dude');
+    this.add.sprite(400, 100, 'dud');
 
     // options Title
     this.title = this.add.text(400, 200, 'Options', {

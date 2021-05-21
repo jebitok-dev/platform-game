@@ -4,8 +4,10 @@ import credits from '../assets/credits.png';
 import how2playbtn from '../assets/how2playbtn.png';
 import success from '../assets/success.png';
 import star from '../assets/star.png';
+/* eslint-disable*/
+import blue from '../assets/blue.png'
 import bomb from '../assets/bomb.png';
-import dude from '../assets/purpul-dud.png';
+import dud from '../assets/purpul-dud.png';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -29,7 +31,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('platform', success);
     this.load.image('star', star);
     this.load.image('bomb', bomb);
-    this.load.spritesheet('purpul-dud', { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('dud', { frameWidth: 32, frameHeight: 48 });
 
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
