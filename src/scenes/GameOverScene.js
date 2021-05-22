@@ -38,7 +38,7 @@ export default class GameOverScene extends Phaser.Scene {
       this.scene.start('Game');
     });
 
-    this.gameButton = btn(this, 500, 500, 'Play', 35);
+    this.gameButton = btn(this, 500, 500, 'Menu', 35);
     this.gameButton.on('pointerdown', () => {
       Dom.removeDomElements();
       this.scene.start('Title');

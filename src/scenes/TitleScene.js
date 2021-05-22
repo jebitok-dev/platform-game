@@ -8,7 +8,7 @@ export default class TitleScene extends Phaser.Scene {
   create() {
     // Images
     this.add.image(400, 80, 'star');
-    this.add.image(400, 130, 'dude');
+    this.add.image(400, 130, 'dud');
 
     // Title
     this.title = this.add.text(400, 250, 'Platformer', {
