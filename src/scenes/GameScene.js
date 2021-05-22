@@ -41,11 +41,6 @@ export default class GameScene extends Phaser.Scene {
     super('Game');
   }
 
-  preload() {
-    // load images
-    this.load.image('logo', 'assets/logo.png');
-  }
-
   create() {
     this.add.image(400, 300, 'blue');
 
@@ -65,7 +60,7 @@ export default class GameScene extends Phaser.Scene {
     platforms.create(330, 160, 'ground').setScale(0.2).refreshBody();
 
     // Player
-    player = this.physics.add.sprite(100, 450, 'dude');
+    player = this.physics.add.sprite(100, 450, 'dud');
     player.setBounce(0.2);
     player.setCollideWorldBounds(true);
     player.body.setGravityY(300);
@@ -74,20 +69,20 @@ export default class GameScene extends Phaser.Scene {
     // Anims
     this.anims.create({
       key: 'left',
-      frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+      frames: this.anims.generateFrameNumbers('dud', { start: 0, end: 3 }),
       frameRate: 10,
       repeat: -1,
     });
 
     this.anims.create({
       key: 'turn',
-      frames: [{ key: 'dude', frame: 4 }],
+      frames: [{ key: 'dud', frame: 4 }],
       frameRate: 20,
     });
 
     this.anims.create({
       key: 'right',
-      frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+      frames: this.anims.generateFrameNumbers('dud', { start: 5, end: 8 }),
       frameRate: 10,
       repeat: -1,
     });

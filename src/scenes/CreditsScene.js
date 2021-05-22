@@ -6,7 +6,7 @@ export default class CreditsScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.sprite(400, 100, 'dude');
+    this.add.sprite(400, 100, 'dud');
 
     // Title
     this.title = this.add.text(400, 200, 'Credits', {

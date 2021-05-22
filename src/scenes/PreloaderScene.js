@@ -28,10 +28,10 @@ export default class PreloaderScene extends Phaser.Scene {
   preload() {
     // load assets needed in our game
     this.load.image('blue', blue);
-    this.load.image('platform', success);
+    this.load.image('success', success);
     this.load.image('star', star);
     this.load.image('bomb', bomb);
-    this.load.spritesheet('dud', { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('dud', dud, { frameWidth: 32, frameHeight: 48 });
 
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
