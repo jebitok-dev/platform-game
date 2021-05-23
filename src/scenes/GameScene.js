@@ -47,17 +47,17 @@ export default class GameScene extends Phaser.Scene {
     // Platforms
     platforms = this.physics.add.staticGroup();
 
-    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+    platforms.create(400, 568, 'success').setScale(2).refreshBody();
 
-    platforms.create(750, 470, 'ground');
-    platforms.create(0, 200, 'ground').setScale(0.4).refreshBody();
-    platforms.create(170, 100, 'ground').setScale(0.1).refreshBody();
-    platforms.create(450, 390, 'ground').setScale(0.3).refreshBody();
-    platforms.create(750, 130, 'ground').setScale(0.5).refreshBody();
-    platforms.create(200, 320, 'ground').setScale(0.5).refreshBody();
-    platforms.create(500, 200, 'ground').setScale(0.2).refreshBody();
-    platforms.create(200, 230, 'ground').setScale(0.2).refreshBody();
-    platforms.create(330, 160, 'ground').setScale(0.2).refreshBody();
+    platforms.create(750, 470, 'success');
+    platforms.create(0, 200, 'success').setScale(0.4).refreshBody();
+    platforms.create(170, 100, 'success').setScale(0.1).refreshBody();
+    platforms.create(450, 390, 'success').setScale(0.3).refreshBody();
+    platforms.create(750, 130, 'success').setScale(0.5).refreshBody();
+    platforms.create(200, 320, 'success').setScale(0.5).refreshBody();
+    platforms.create(500, 200, 'success').setScale(0.2).refreshBody();
+    platforms.create(200, 230, 'success').setScale(0.2).refreshBody();
+    platforms.create(330, 160, 'success').setScale(0.2).refreshBody();
 
     // Player
     player = this.physics.add.sprite(100, 450, 'dud');
