@@ -1,7 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Platform-game
-Building platform game using phaser.io an HTML5 game framework that helps developers build cross-browser games quickly.
+Building platform game using phaser.io an HTML5 game framework that helps developers build cross-browser games quickly. 
+
+The objective of the game is to collect the stars. Each time you collect 16 stars a bomb enters the game and you have to continue collecting stars avoiding the bombs that will be appearing. 
 
 ## Built With
 
@@ -10,11 +12,18 @@ Building platform game using phaser.io an HTML5 game framework that helps develo
 - HTML5
 - Jest for testing
 
+### Usage
+To play the game you need keyboard(up-down and left-right arrows) and browser.
+
+- Move to right using -> arrow
+- Move to left using <- arrow
+- Jump using up arrow
+
 ## Getting Started
 
 ### Prerequisites
 
-To get this project up and running locally, you must already have ruby and rails plus the necessary gems installed on your computer
+To get this project up and running locally, you must already have node.js plus the necessary packages installed on your computer
 
 **simple steps set up on your local machine**
 
