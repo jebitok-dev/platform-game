@@ -33,7 +33,7 @@ To get this project up and running locally, you must already have node.js plus t
 - Run `cd platform-game`
 ```
 
-<!-- - [Live Version](https://todo-list-vjs.netlify.app/) -->
+- [Live Version](https://platform-game-with-phaser.netlify.app/)
 
 ### Run Tests
 Tests for modules written using **Jest**
