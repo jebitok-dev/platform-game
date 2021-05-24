@@ -20,7 +20,7 @@ export default class CreditsScene extends Phaser.Scene {
     this.title = this.add.text(
       400,
       350,
-      "This game has been built with\ntechnologies and help from:\n\n - Phaser - Phaser-Documentation\n- Mupa M'mbetsa Nzaphila - Microverse.\n\n All of the assets were taken from\n Phaser mainpage.",
+      'This game has been built with\ntechnologies and help from:\n\n - Phaser - Phaser-Documentation\n Microverse.\n\n All of the assets were taken from\n Phaser mainpage.',
       {
         font: '25px monospace',
         fill: '#999999',
