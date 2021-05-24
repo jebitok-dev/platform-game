@@ -1,5 +1,5 @@
 const api = (() => {
-  const key = '6TXhIy7RINUnPNtbAvct';
+  const key = 'UimQI5ZhHV2xp0YTeEdT';
 
   const ScoreList = async () => {
     try {
