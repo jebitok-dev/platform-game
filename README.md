@@ -3,8 +3,6 @@
 # Platform-game
 Building platform game using phaser.io an HTML5 game framework that helps developers build cross-browser games quickly. 
 
-The objective of the game is to collect the stars. Each time you collect 16 stars a bomb enters the game and you have to continue collecting stars avoiding the bombs that will be appearing. 
-
 ## Built With
 
 - JavaScript
@@ -18,6 +16,8 @@ To play the game you need keyboard(up-down and left-right arrows) and browser.
 - Move to right using -> arrow
 - Move to left using <- arrow
 - Jump using up arrow
+
+The objective of the game is to collect the stars, each time you collect 16 stars, a bomb enters the game, you have to continue collecting stars avoiding the bombs that will be appearing every 16 bombs collected.
 
 ## Getting Started
 

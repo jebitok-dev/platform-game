@@ -31,7 +31,7 @@ const collectStar = (player, star) => {
 };
 /* eslint-disable*/
 const hitBomb = (player, bombed) => {
-  player.setInit(0xf00);
+  player.setTint(0xf00);
   player.anims.play('turn');
   gameOver = true;
 };
