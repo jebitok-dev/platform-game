@@ -9,6 +9,7 @@ Building platform game using phaser.io an HTML5 game framework that helps develo
 - Phaser.io 
 - HTML5
 - Jest for testing
+- postman for API KEY Generation
 
 ### Usage
 To play the game you need keyboard(up-down and left-right arrows) and browser.
@@ -17,7 +18,7 @@ To play the game you need keyboard(up-down and left-right arrows) and browser.
 - Move to left using <- arrow
 - Jump using up arrow
 
-The objective of the game is to collect the stars, each time you collect 16 stars, a bomb enters the game, you have to continue collecting stars avoiding the bombs that will be appearing every 16 bombs collected.
+The objective of the game is to collect the stars, each time you collect 16 stars, a bomb enters the game, you have to continue collecting stars avoiding the bombs that will be appearing every 16 bombs collected. Once player reaches the end of the game or is hit by bomb the game is over and they submit there name and score to be updated on LeaderBoard. The board is ranked based on the highest score.
 
 ## Getting Started
 
