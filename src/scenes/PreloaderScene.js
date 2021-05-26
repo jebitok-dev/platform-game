@@ -5,7 +5,7 @@ import how2playbtn from '../assets/how2playbtn.png';
 import success from '../assets/success.png';
 import star from '../assets/star.png';
 /* eslint-disable*/
-import blue from '../assets/blue.png'
+// import blue from '../assets/blue.png'
 import bomb from '../assets/bomb.png';
 import dud from '../assets/purpul-dud.png';
 
@@ -27,7 +27,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
   preload() {
     // load assets needed in our game
-    this.load.image('blue', blue);
+    // this.load.image('blue', blue);
     this.load.image('success', success);
     this.load.image('star', star);
     this.load.image('bomb', bomb);
@@ -46,7 +46,7 @@ export default class PreloaderScene extends Phaser.Scene {
       text: 'Loading...',
       style: {
         font: '20px monospace',
-        fill: '#ffffff',
+        fill: '#32a852',
       },
     });
     loadingText.setOrigin(0.5, 0.5);
@@ -57,7 +57,7 @@ export default class PreloaderScene extends Phaser.Scene {
       text: '0%',
       style: {
         font: '18px monospace',
-        fill: '#ffffff',
+        fill: '#32a852',
       },
     });
     percentText.setOrigin(0.5, 0.5);
@@ -68,7 +68,7 @@ export default class PreloaderScene extends Phaser.Scene {
       text: '',
       style: {
         font: '18px monospace',
-        fill: '#ffffff',
+        fill: '#32a852',
       },
     });
     assetText.setOrigin(0.5, 0.5);

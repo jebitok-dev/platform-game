@@ -21,7 +21,7 @@ export default class LeaderBoardScene extends Phaser.Scene {
     // Title
     this.title = this.add.text(400, 90, 'Top Scores', {
       font: '50px monospace',
-      fill: '#aaaaaa',
+      fill: '#32a852',
       align: 'center',
     });
     this.title.setOrigin(0.5, 0.5);
@@ -29,22 +29,22 @@ export default class LeaderBoardScene extends Phaser.Scene {
     // Table
     this.position = this.add.text(100, 150, 'Position', {
       font: '20px monospace',
-      fill: '#aaa',
+      fill: '#32a852',
     });
 
     this.name = this.add.text(320, 150, 'Player', {
       font: '20px monospace',
-      fill: '#aaa',
+      fill: '#32a852',
     });
 
     this.score = this.add.text(530, 150, 'Score', {
       font: '20px monospace',
-      fill: '#aaa',
+      fill: '#32a852',
     });
 
     this.playerScore = this.add.text(400, 350, player, {
       font: '25px monospace',
-      fill: '#999',
+      fill: '#32a852',
       align: 'center',
     });
     this.playerScore.setOrigin(0.5, 0.5);

@@ -7,15 +7,15 @@ export default class TitleScene extends Phaser.Scene {
 
   create() {
     // Images
-    this.add.image(400, 80, 'star');
-    this.add.image(400, 130, 'dud');
+    this.add.image(600, 80, 'star');
+    this.add.image(600, 130, 'dud');
 
     // Title
-    this.title = this.add.text(400, 250, 'Platformer', {
+    this.title = this.add.text(600, 250, 'Platformer', {
       fontSize: 50,
       fontStyle: 'bold',
       align: 'center',
-      color: '#aaaaaa',
+      color: '#32a852',
     });
     this.title.setOrigin(0.5, 0.5);
 
@@ -29,25 +29,25 @@ export default class TitleScene extends Phaser.Scene {
       return btn;
     };
     // Play button
-    this.gameButton = btn(this, 400, 330, 'Play', 35);
+    this.gameButton = btn(this, 600, 330, 'Play', 35);
     this.gameButton.on('pointerdown', () => {
       this.scene.start('Game');
     });
 
     // Option button
-    this.gameButton = btn(this, 400, 400, 'Options', 28);
+    this.gameButton = btn(this, 600, 400, 'Options', 28);
     this.gameButton.on('pointerdown', () => {
       this.scene.start('Options');
     });
 
     // Leaderboard button
-    this.gameButton = btn(this, 400, 445, 'LeaderBoard', 28);
+    this.gameButton = btn(this, 600, 445, 'LeaderBoard', 28);
     this.gameButton.on('pointerdown', () => {
       this.scene.start('LeaderBoard');
     });
 
     // Credits button
-    this.gameButton = btn(this, 400, 490, 'Credits', 28);
+    this.gameButton = btn(this, 600, 490, 'Credits', 28);
     this.gameButton.on('pointerdown', () => {
       this.scene.start('Credits');
     });

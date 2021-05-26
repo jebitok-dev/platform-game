@@ -11,7 +11,7 @@ export default class OptionsScene extends Phaser.Scene {
     // options Title
     this.title = this.add.text(400, 200, 'Options', {
       font: '50px monospace',
-      fill: '#aaaaaa',
+      fill: '#32a852',
       align: 'center',
     });
     this.title.setOrigin(0.5, 0.5);

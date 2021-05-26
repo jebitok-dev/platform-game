@@ -42,7 +42,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(400, 300, 'blue');
+    // this.add.image(400, 300, 'blue');
 
     // Platforms
     platforms = this.physics.add.staticGroup();
@@ -103,7 +103,7 @@ export default class GameScene extends Phaser.Scene {
     // Score
     scoreText = this.add.text(16, 16, 'Score: 0', {
       fontSize: '32px',
-      fill: '#000',
+      fill: '#32a852',
     });
 
     // Bombs

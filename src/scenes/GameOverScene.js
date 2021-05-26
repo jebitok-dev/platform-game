@@ -10,7 +10,7 @@ export default class GameOverScene extends Phaser.Scene {
   create() {
     this.title = this.add.text(400, 120, 'Game Over', {
       font: '50px monospase',
-      fill: '#bbb',
+      fill: '#32a852',
     });
     this.title.setOrigin(0.5, 0.5);
 
@@ -19,7 +19,7 @@ export default class GameOverScene extends Phaser.Scene {
 
     this.score = this.add.text(400, 200, `Your score is: ${score}`, {
       font: '35px monoscape',
-      fill: '#888',
+      fill: '#32a852',
     });
     this.score.setOrigin(0.5, 0.5);
 
